@@ -15,8 +15,6 @@ public class DetailedInfoEntity {
     private String cityAddress;
     @Column(nullable = false)
     private String streetAddress;
-    @Column(nullable = true)
-    private int flatNumberAddress;
     @Column(nullable = false)
     private int buildingNumberAddress;
 
@@ -25,14 +23,6 @@ public class DetailedInfoEntity {
 
     public DetailedInfoEntity() {}
 
-    public DetailedInfoEntity(String ownerName, String ownerSurname, String cityAddress, String streetAddress, int flatNumberAddress, int buildingNumberAddress){
-        this.ownerName = ownerName;
-        this.ownerSurname = ownerSurname;
-        this.cityAddress = cityAddress;
-        this.streetAddress = streetAddress;
-        this.flatNumberAddress = flatNumberAddress;
-        this.buildingNumberAddress = buildingNumberAddress;
-    }
     public DetailedInfoEntity(String ownerName, String ownerSurname, String cityAddress, String streetAddress, int buildingNumberAddress){
         this.ownerName = ownerName;
         this.ownerSurname = ownerSurname;
@@ -79,14 +69,6 @@ public class DetailedInfoEntity {
 
     public void setStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
-    }
-
-    public int getFlatNumberAddress() {
-        return flatNumberAddress;
-    }
-
-    public void setFlatNumberAddress(int flatNumberAddress) {
-        this.flatNumberAddress = flatNumberAddress;
     }
 
     public int getBuildingNumberAddress() {
