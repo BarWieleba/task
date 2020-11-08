@@ -19,7 +19,7 @@ public class DetailedInfoController {
         return repository.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/newDetails")
     DetailedInfoEntity newDetail(@RequestBody DetailedInfoEntity newDetail){
         return repository.save(newDetail);
     }

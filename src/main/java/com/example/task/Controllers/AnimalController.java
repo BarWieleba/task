@@ -16,11 +16,12 @@ public class AnimalController {
     }
 
     @GetMapping("/animals")
+    //@RequestMapping(value = "/animals", method = RequestMethod.GET)
     List<AnimalEntity> all(){
         return repository.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/newAnimal")
     AnimalEntity newAnimal (@RequestBody AnimalEntity newAnimal){
         return repository.save(newAnimal);
     }
