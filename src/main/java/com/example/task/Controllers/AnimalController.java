@@ -4,7 +4,9 @@ package com.example.task.Controllers;
 import com.example.task.Entities.AnimalEntity;
 import com.example.task.Exceptions.AnimalNotFoundException;
 import com.example.task.Repositories.AnimalRepository;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,15 +19,13 @@ public class AnimalController {
     }
 
     @GetMapping("/animals")
-    //@RequestMapping(value = "/animals", method = RequestMethod.GET)
     List<AnimalEntity> all(){
         return repository.findAll();
     }
 
-    //@PostMapping("/newAnimal")
-    @PostMapping(path = "/animals", consumes = "application/json", produces = "application/json")
-    AnimalEntity newAnimal (@RequestBody AnimalEntity newAnimal){
-        return repository.save(newAnimal);
+    @PostMapping(value = "/animals", consumes = "application/json")
+    AnimalEntity newAnimal (@RequestBody List<AnimalEntity> list){
+        return repository.save(list.get(0));
     }
 
     @GetMapping("/animals/{id}")
