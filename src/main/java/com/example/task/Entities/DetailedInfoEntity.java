@@ -1,5 +1,7 @@
 package com.example.task.Entities;
 
+import com.example.task.Repositories.AnimalRepository;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -23,12 +25,13 @@ public class DetailedInfoEntity {
 
     public DetailedInfoEntity() {}
 
-    public DetailedInfoEntity(String ownerName, String ownerSurname, String cityAddress, String streetAddress, int buildingNumberAddress){
+    public DetailedInfoEntity(String ownerName, String ownerSurname, String cityAddress, String streetAddress, int buildingNumberAddress, AnimalEntity animalEntity){
         this.ownerName = ownerName;
         this.ownerSurname = ownerSurname;
         this.cityAddress = cityAddress;
         this.streetAddress = streetAddress;
         this.buildingNumberAddress = buildingNumberAddress;
+        this.animalEntity = animalEntity;
     }
 
     public Long getId() {
