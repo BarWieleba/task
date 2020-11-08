@@ -4,6 +4,7 @@ package com.example.task.Controllers;
 import com.example.task.Entities.AnimalEntity;
 import com.example.task.Exceptions.AnimalNotFoundException;
 import com.example.task.Repositories.AnimalRepository;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +22,8 @@ public class AnimalController {
         return repository.findAll();
     }
 
-    @PostMapping("/newAnimal")
+    //@PostMapping("/newAnimal")
+    @PostMapping(path = "/animals", consumes = "application/json", produces = "application/json")
     AnimalEntity newAnimal (@RequestBody AnimalEntity newAnimal){
         return repository.save(newAnimal);
     }
