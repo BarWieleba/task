@@ -19,9 +19,9 @@ public class DetailedInfoController {
         return repository.findAll();
     }
 
-    @PostMapping("/newDetails")
-    DetailedInfoEntity newDetail(@RequestBody DetailedInfoEntity newDetail){
-        return repository.save(newDetail);
+    @PostMapping("/details")
+    DetailedInfoEntity newDetail(@RequestBody List<DetailedInfoEntity> list){
+        return repository.save(list.get(0));
     }
 
     @GetMapping("/details/{id}")
