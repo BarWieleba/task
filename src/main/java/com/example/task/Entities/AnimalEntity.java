@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class AnimalEntity {
@@ -14,6 +15,9 @@ public class AnimalEntity {
     private String breed;
     private String specie;
     private int age;
+
+    @OneToMany(mappedBy = "animalEntity", cascade = CascadeType.REMOVE)
+    private Set<DetailedInfoEntity> detailedInfoEntities;
 
     public AnimalEntity() {}
 

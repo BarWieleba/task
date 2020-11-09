@@ -1,6 +1,7 @@
 package com.example.task.Entities;
 
 import com.example.task.Repositories.AnimalRepository;
+import org.hibernate.annotations.OnDelete;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public class DetailedInfoEntity {
     @Column(nullable = false)
     private int buildingNumberAddress;
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne
     private AnimalEntity animalEntity;
 
     public DetailedInfoEntity() {}
