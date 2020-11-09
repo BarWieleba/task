@@ -110,6 +110,7 @@ public class DetailedInfoEntity {
 
     @Override
     public String toString() {
-        return "DetailedInfo{"+"id="+this.id+", ownerName='"+this.ownerName + '\'' + ", ownerSurname='"+this.ownerSurname+'\''+", cityAddress='"+this.cityAddress+'\''+", streetAddress='"+this.streetAddress+'\''+", buildingAddress='"+this.buildingNumberAddress+'\''+'}';
+        //return "DetailedInfo{"+"id="+this.id+", ownerName='"+this.ownerName + '\'' + ", ownerSurname='"+this.ownerSurname+'\''+", cityAddress='"+this.cityAddress+'\''+", streetAddress='"+this.streetAddress+'\''+", buildingAddress='"+this.buildingNumberAddress+'\''+'}';
+        return String.valueOf(this.id);
     }
 }

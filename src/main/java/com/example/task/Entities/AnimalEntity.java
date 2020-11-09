@@ -87,6 +87,7 @@ public class AnimalEntity {
 
     @Override
     public String toString() {
-        return "Animal{"+"id="+this.id+", name='" + this.name +'\'' + ", breed='"+this.breed + '\'' + ", age='"+ this.age +'\''+'}';
+        //return "Animal{"+"id="+this.id+", name='" + this.name +'\'' + ", breed='"+this.breed + '\'' + ", age='"+ this.age +'\''+'}';
+        return String.valueOf(this.id);
     }
 }
