@@ -20,7 +20,7 @@ public class DetailedInfoEntity {
     @Column(nullable = false)
     private int buildingNumberAddress;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private AnimalEntity animalEntity;
 
     public DetailedInfoEntity() {}

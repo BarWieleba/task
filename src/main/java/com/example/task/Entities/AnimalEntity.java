@@ -1,8 +1,9 @@
 package com.example.task.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -21,6 +22,10 @@ public class AnimalEntity {
         this.breed = breed;
         this.specie = specie;
         this.age = age;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
