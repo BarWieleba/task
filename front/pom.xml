@@ -6,8 +6,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>front.example</groupId>
-    <artifactId>frontend</artifactId>
+    <groupId>front.end</groupId>
+    <artifactId>front</artifactId>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,6 +17,11 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
             <version>13</version>
         </dependency>
     </dependencies>
@@ -35,7 +40,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>front.example.App</mainClass>
+                    <mainClass>front.end.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>
